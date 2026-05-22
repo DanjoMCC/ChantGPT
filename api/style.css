@@ -15,7 +15,8 @@
 }
 
 html, body {
-  background: var(--white);
+  background: var(--white) url('BG_shirt.png') repeat center center;
+  background-size: 600px;
   color: var(--text);
   font-family: 'Barlow', sans-serif;
   min-height: 100vh;
