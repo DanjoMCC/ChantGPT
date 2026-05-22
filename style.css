@@ -22,6 +22,11 @@ html, body {
   min-height: 100vh;
   overflow-x: hidden;
 }
+  color: var(--text);
+  font-family: 'Barlow', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
 
 /* ── HERO ── */
 .hero {
