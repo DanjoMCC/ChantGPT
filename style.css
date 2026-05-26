@@ -317,3 +317,6 @@ body {
   background-image: url('https://chant-gpt-six.vercel.app/BG_shirt.png') !important;
   background-size: 600px !important;
 }
+body {
+  background-color: red !important;
+}
