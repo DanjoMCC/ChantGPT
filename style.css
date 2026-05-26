@@ -160,7 +160,7 @@ html, body {
   background: var(--navy);
 }
 
-.card-body { padding: 16px; background: white; }
+.card-body { padding: 16px; background: transparent; }
 
 .steps { display: flex; flex-direction: column; gap: 10px; }
 
