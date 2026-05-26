@@ -62,7 +62,7 @@ html, body {
   position: relative;
   width: min(900px, 96vw);
   margin: 0 auto;
-  background: #ffffff;
+ background: transparent;
 }
 
 .fan-img {
