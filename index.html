@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChantGPT — YOUR AI WORLD CUP SONG GENERATOR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── HERO ── -->
+  <div class="hero">
+
+    <div class="logo">
+      <img class="logo-img" src="logo.png" alt="ChantGPT" />
+      <p class="tagline">YOUR AI WORLD CUP SONG GENERATOR</p>
+    </div>
+
+    <div class="fan-container">
+      <img class="fan-img" src="fan.png" alt="England fan holding scarf" />
+      <div class="scarf-input">
+        <input
+          type="text"
+          class="scarf-textarea"
+          id="prompt"
+          placeholder="DESCRIBE YOUR WORLD CUP SONG HERE"
+        />
+      </div>
+    </div>
+
+    <div class="controls">
+      <button class="gen-btn" id="genBtn" onclick="generate()">MAKE MY WORLD CUP SONG</button>
+    </div>
+
+  </div>
+
+  <!-- ── PROGRESS ── -->
+  <div class="progress-section" id="progressSection">
+    <div class="card">
+      <div class="card-header">🎵 Composing Your Anthem...</div>
+      <div class="card-body">
+        <div class="steps">
+          <div class="step" id="step1"><div class="step-dot">1</div><span>Writing your lyrics</span></div>
+          <div class="step" id="step2"><div class="step-dot">2</div><span>Composing the music</span></div>
+          <div class="step" id="step3"><div class="step-dot">3</div><span>Recording the vocals</span></div>
+          <div class="step" id="step4"><div class="step-dot">4</div><span>Mixing your anthem</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── ERROR ── -->
+  <div class="error-box" id="errorBox"></div>
+
+  <!-- ── OUTPUT ── -->
+  <div class="output-section" id="outputSection">
+    <div class="card">
+      <div class="output-header">
+        <span class="output-title" id="songTitle">Your Anthem</span>
+        <button class="copy-btn" onclick="copyLyrics()">Copy Lyrics</button>
+      </div>
+      <div class="player-section">
+        <audio id="audioPlayer" controls></audio>
+        <br>
+        <a class="download-btn" id="downloadBtn" download="chantgpt.mp3">⬇ Download MP3</a>
+      </div>
+      <div class="lyrics-section">
+        <div class="lyrics-label">Lyrics</div>
+        <div class="lyrics-box" id="lyricsBox"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── */
+  <div class="footer">CHANTGPT · POWERED BY CLAUDE &amp; ELEVENLABS</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
