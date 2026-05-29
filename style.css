@@ -18,7 +18,7 @@ html, body {
   background-color: var(--white);
   background-image: url('BG_shirt.png');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center center;
   background-attachment: fixed;
   color: var(--text);
