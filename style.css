@@ -315,10 +315,5 @@ audio { width: 100%; border-radius: var(--radius); }
   .scarf-textarea { font-size: 11px; padding: 6px 8px; }
   .fan-container  { width: 96vw; }
 }
-body {
-  background-image: url('https://chant-gpt-six.vercel.app/BG_shirt.png') !important;
-  background-size: 600px !important;
-}
-body {
-  background-color: red !important;
-}
+
+
