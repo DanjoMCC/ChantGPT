@@ -17,8 +17,10 @@
 html, body {
   background-color: var(--white);
   background-image: url('BG_shirt.png');
-  background-repeat: repeat;
-  background-size: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
   color: var(--text);
   font-family: 'Barlow', sans-serif;
   min-height: 100vh;
