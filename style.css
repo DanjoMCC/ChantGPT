@@ -72,9 +72,10 @@ html, body {
 }
 
 .prompt-badge {
-  width: 220px;
+  width: 180px;
   flex-shrink: 0;
   object-fit: contain;
+  margin: 0 -20px;
 }
 
 /* ── FAN IMAGE & SCARF INPUT ── */
