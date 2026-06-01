@@ -320,7 +320,9 @@ audio { width: 100%; border-radius: var(--radius); }
   display: flex;
   align-items: center;
   justify-content: center;
-  width: min(1200px, 98vw);
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
   gap: 0;
 }
 
