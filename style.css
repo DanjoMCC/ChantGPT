@@ -71,7 +71,7 @@ html, body {
 }
 
 .prompt-badge {
-  width: 220px;
+  width: 242px;
   flex-shrink: 0;
   object-fit: contain;
 }
