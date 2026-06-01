@@ -42,7 +42,7 @@ Instructions:
 - First line must be: TITLE: [your creative song title]
 - Second line must be: STYLE_PROMPT: [a short 10-15 word music description for an AI music generator, e.g. "playful singalong anthem, pub crowd chanting, brass band, upbeat, cheerful, bouncy"]
 - Then write the full song lyrics with sections labelled in square brackets like [Verse 1], [Chorus], [Bridge] etc.
-- Include 2 verses, a chorus (repeated), and a bridge
+- Include 1 verse, a chorus, a bridge, then a final chorus — keep it short and punchy
 - Make it fun, silly and singable — think terrace chants, crowd participation, daft rhymes
 - It should make people laugh AND want to sing along
 - Use football references throughout`
