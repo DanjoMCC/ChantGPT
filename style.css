@@ -75,7 +75,7 @@ html, body {
   width: 220px;
   flex-shrink: 0;
   object-fit: contain;
-  margin: 0 -60px;
+  margin: 0 -120px;
 }
 }
 
