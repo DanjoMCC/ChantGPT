@@ -58,7 +58,7 @@ html, body {
   color: var(--navy);
   position: relative;
   z-index: 1;
-  margin-top: -20px;
+  margin-top: -40px;
 }
 
 /* ── FAN ROW ── */
