@@ -74,13 +74,12 @@ html, body {
   width: 363px;
   flex-shrink: 0;
   object-fit: contain;
-  margin: 0 -60px;
 }
 
 /* ── FAN IMAGE & SCARF INPUT ── */
 .fan-container {
   position: relative;
-  width: min(900px, 60vw);
+  width: min(900px, 50vw);
   flex-shrink: 1;
   background: transparent;
 }
