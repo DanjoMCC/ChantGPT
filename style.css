@@ -129,7 +129,7 @@ html, body {
 /* ── GENERATE BUTTON ── */
 .controls {
   width: min(900px, 96vw);
-  margin: 0 auto 0;
+  margin: -60px auto 0;
   position: relative;
   z-index: 20;
 }
