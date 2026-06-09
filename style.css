@@ -79,7 +79,7 @@ html, body {
 /* ── FAN IMAGE & SCARF INPUT ── */
 .fan-container {
   position: relative;
-  width: min(900px, 50vw);
+  width: min(900px, 55vw);
   flex-shrink: 1;
   background: transparent;
 }
