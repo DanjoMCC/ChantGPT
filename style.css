@@ -71,7 +71,7 @@ html, body {
 }
 
 .prompt-badge {
-  width: 363px;
+  width: 290px;
   flex-shrink: 0;
   object-fit: contain;
 }
@@ -79,7 +79,7 @@ html, body {
 /* ── FAN IMAGE & SCARF INPUT ── */
 .fan-container {
   position: relative;
-  width: min(900px, 55vw);
+  width: min(900px, 60vw);
   flex-shrink: 1;
   background: transparent;
 }
