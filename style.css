@@ -424,6 +424,10 @@ audio { width: 100%; border-radius: var(--radius); }
   .prompt-badge   { display: none; }
   .fan-container  { width: 96vw; }
   .scarf-textarea { font-size: 11px; padding: 6px 8px; }
+  .logo-img       { width: min(380px, 85vw); margin: 0 auto -40px; }
+  .logo .tagline  { font-size: 14px; letter-spacing: 2px; margin-top: -10px; }
+  .logo           { margin-top: 0; }
+  .gen-btn        { width: 70%; font-size: 20px; padding: 12px; }
 }
 
 /* ── SHARE NUDGE ── */
