@@ -19,7 +19,7 @@ export default async function handler(req, res) {
   }
 
   // ── Daily site-wide cap ──────────────────────────────────────────────────
-  const DAILY_CAP = 100;
+  const DAILY_CAP = 1;
 
   try {
     const client = createClient({ url: process.env.REDIS_URL });
