@@ -103,7 +103,7 @@ Instructions:
 
   // ── Step 2: Generate song audio with ElevenLabs ──────────────────────────
   try {
-    const musicPrompt = `${stylePrompt}. Include vocals singing these lyrics: ${lyrics.slice(0, 600)}`;
+const musicPrompt = `${stylePrompt}. Vocals start immediately within the first 5 seconds, no long intro. Include vocals singing these lyrics: ${lyrics.slice(0, 600)}`;
 
     const elRes = await fetch('https://api.elevenlabs.io/v1/music', {
       method: 'POST',
