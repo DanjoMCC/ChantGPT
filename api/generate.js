@@ -19,7 +19,7 @@ export default async function handler(req, res) {
   }
 
   // ── Daily site-wide cap ──────────────────────────────────────────────────
-  const DAILY_CAP = 1;
+  const DAILY_CAP = 100;
 
   try {
     const today = new Date().toISOString().slice(0, 10);
