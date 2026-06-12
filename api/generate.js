@@ -1,4 +1,4 @@
-import Redis from 'ioredis';
+import { kv } from '@vercel/kv';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -21,18 +21,16 @@ export default async function handler(req, res) {
   // ── Daily site-wide cap ──────────────────────────────────────────────────
   const DAILY_CAP = 1;
 
- const redis = new Redis(process.env.default_REDIS_URL);
+  try {
     const today = new Date().toISOString().slice(0, 10);
     const key = `songs:${today}`;
-    const count = await redis.incr(key);
-    if (count === 1) await redis.expire(key, 90000);
+    const count = await kv.incr(key);
+    if (count === 1) await kv.expire(key, 90000);
     if (count > DAILY_CAP) {
-      await redis.quit();
       return res.status(429).json({ error: 'daily_cap' });
     }
   } catch (e) {
-    console.error('Redis error:', e.message);
-    await redis.quit();
+    console.error('KV error:', e.message);
     return res.status(500).json({ error: 'Service temporarily unavailable. Please try again.' });
   }
 
