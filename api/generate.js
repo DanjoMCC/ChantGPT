@@ -21,8 +21,7 @@ export default async function handler(req, res) {
   // ── Daily site-wide cap ──────────────────────────────────────────────────
   const DAILY_CAP = 1;
 
-  const redis = new Redis(process.env.REDIS_URL, { tls: { rejectUnauthorized: false } });
-  try {
+ const redis = new Redis(process.env.default_REDIS_URL);
     const today = new Date().toISOString().slice(0, 10);
     const key = `songs:${today}`;
     const count = await redis.incr(key);
