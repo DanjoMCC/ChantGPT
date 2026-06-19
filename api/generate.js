@@ -1,5 +1,3 @@
-import { kv } from '@vercel/kv';
-
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -13,19 +11,31 @@ export default async function handler(req, res) {
 
   const ANTHROPIC_KEY  = process.env.ANTHROPIC_API_KEY;
   const ELEVENLABS_KEY = process.env.ELEVENLABS_API_KEY;
+  const KV_URL         = process.env.UPSTASH_KV_REST_API_URL;
+  const KV_TOKEN       = process.env.UPSTASH_KV_REST_API_TOKEN;
 
   if (!ANTHROPIC_KEY || !ELEVENLABS_KEY) {
     return res.status(500).json({ error: 'API keys not configured. Please add them in Vercel environment variables.' });
   }
 
   // ── Daily site-wide cap ──────────────────────────────────────────────────
-  const DAILY_CAP = 250;
+  const DAILY_CAP = 100;
 
   try {
     const today = new Date().toISOString().slice(0, 10);
     const key = `songs:${today}`;
-    const count = await kv.incr(key);
-    if (count === 1) await kv.expire(key, 90000);
+
+    const incrRes = await fetch(`${KV_URL}/incr/${key}`, {
+      headers: { Authorization: `Bearer ${KV_TOKEN}` }
+    });
+    const { result: count } = await incrRes.json();
+
+    if (count === 1) {
+      await fetch(`${KV_URL}/expire/${key}/90000`, {
+        headers: { Authorization: `Bearer ${KV_TOKEN}` }
+      });
+    }
+
     if (count > DAILY_CAP) {
       return res.status(429).json({ error: 'daily_cap' });
     }
@@ -93,7 +103,7 @@ Instructions:
 
   // ── Step 2: Generate song audio with ElevenLabs ──────────────────────────
   try {
-    const musicPrompt = `${stylePrompt}. Include vocals singing these lyrics: ${lyrics.slice(0, 600)}`;
+    const musicPrompt = `${stylePrompt}. Vocals start immediately within the first 3 seconds, no long intro. Include vocals singing these lyrics: ${lyrics.slice(0, 600)}`;
 
     const elRes = await fetch('https://api.elevenlabs.io/v1/music', {
       method: 'POST',
