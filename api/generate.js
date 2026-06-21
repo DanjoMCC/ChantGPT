@@ -68,7 +68,7 @@ Tone: ${tone || 'fun, silly and anthemic — more terrace banter than rock conce
 
 Instructions:
 - First line must be: TITLE: [your creative song title]
-- Second line must be: STYLE_PROMPT: [a short 10-15 word music description for an AI music generator. The music style must ALWAYS be a cheeky pub singalong / terrace chant with brass band, bouncy and daft — NEVER choral, NEVER hymn-like, NEVER orchestral or solemn, regardless of the lyrics' emotional content. e.g. "cheeky pub singalong, terrace chant, brass band, bouncy and daft, male voices, pub crowd"]
+- Second line must be: STYLE_PROMPT: [a short 10-15 word music description for an AI music generator, e.g. "boozy football terrace chant, lads singing off-key, brass band, stomping, pub crowd, oi oi"]
 - Then write the full song lyrics with sections labelled in square brackets like [Verse 1], [Chorus], [Bridge] etc.
 - Include 1 verse, a chorus, then a final chorus — no bridge
 - Keep each section to 4-5 lines — punchy and singable, not too wordy
